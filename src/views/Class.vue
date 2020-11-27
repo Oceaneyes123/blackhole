@@ -5,6 +5,7 @@
         src="../assets/blackhole_class-page_header.jpg"
         width="100%"
         :height="isMobile ? '100vh' : '100vh'"
+        eager
       >
         <v-card height="100%" class="d-flex flex-column" color="#ffffff00">
           <v-container
@@ -76,6 +77,7 @@
                   src="../assets/forum.png"
                   width="200"
                   class="mb-5"
+                  eager
                 ></v-img>
                 <div class="h4 text-purple gmarket">카카오채널</div>
                 <div class="h5 grey--text text-center nanum">
@@ -95,6 +97,7 @@
                   src="../assets/classcard.png"
                   width="200"
                   class="mb-5 mx-auto"
+                  eager
                 ></v-img>
                 <div class="h4 text-purple text-center gmarket">Class card</div>
                 <div class="h5 grey--text text-center nanum">
@@ -114,6 +117,7 @@
                   src="../assets/email.png"
                   width="200"
                   class="mb-5 mx-auto"
+                  eager
                 ></v-img>
                 <div class="h4 text-purple gmarket">ZOOM 화상수업</div>
                 <div class="h5 grey--text text-center nanum">
@@ -272,7 +276,12 @@
     </v-container>
 
     <v-container fluid class="px-0 py-0">
-      <v-img src="../assets/img-bg-pink.png" height="auto" class="pa-5 pa-md-0">
+      <v-img
+        src="../assets/img-bg-pink.png"
+        height="auto"
+        class="pa-5 pa-md-0"
+        eager
+      >
         <div
           class="d-flex flex-column justify-center align-self-center"
           style="height:100%"
