@@ -22,7 +22,7 @@
               <div
                 class="white--text d-flex flex-column flex-md-row justify-md-space-between"
               >
-                <v-container class="py-0" style="max-width: 900px">
+                <v-container class="py-0">
                   <v-row>
                     <v-col
                       md="6"
@@ -35,7 +35,7 @@
                         :style="
                           isMobile
                             ? ''
-                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                            : 'letter-spacing: 2px; text-shadow: 0 0 20px white'
                         "
                       >
                         국내 최초!
@@ -46,7 +46,7 @@
                         :style="
                           isMobile
                             ? ''
-                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white; right:0 '
+                            : 'letter-spacing: 4px; text-shadow: 0 0 20px white; right:0 '
                         "
                       >
                         초중등
@@ -63,7 +63,7 @@
                         :style="
                           isMobile
                             ? ''
-                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                            : 'letter-spacing: 1px; text-shadow: 0 0 20px white'
                         "
                       >
                         쌍방향 온라인
@@ -74,7 +74,7 @@
                         :style="
                           isMobile
                             ? ''
-                            : 'letter-spacing: 8px; text-shadow: 0 0 20px white'
+                            : 'letter-spacing: 2px; text-shadow: 0 0 20px white'
                         "
                         >영단어 프로그램
                       </span>
@@ -154,10 +154,8 @@
       </v-card>
     </v-container>
 
-
     <v-container fluid class="px-0 py-0">
       <v-img src="../assets/blackhole_main_img2.jpg" eager></v-img>
-
     </v-container>
     <v-container class="px-0 py-0" fluid>
       <div
@@ -529,11 +527,9 @@
           </div>
           <v-img
             src="../assets/img-graph.png"
-
             class="mt-15 mb-10"
             eager
             contain
-
           ></v-img>
           <div class="mt-10 h6">
             <span class="text-purple font-weight-black"> 암기 3단계 :</span>
@@ -862,7 +858,7 @@
   </v-app>
 </template>
 
-<style  scoped>
+<style scoped>
 .mobile-flex {
   flex: 0 0 100%; /* flex-grow, flex-shrink, flex-basis */
 }

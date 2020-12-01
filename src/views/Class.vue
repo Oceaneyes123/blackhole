@@ -43,15 +43,25 @@
                       쌍방향 온라인 수업
                     </div>
                   </v-col>
-                  <v-col cols="12" sm="6" :class="isMobile ? 'h6' : 'h4'">
+                  <v-col
+                    cols="12"
+                    sm="6"
+                    :class="isMobile ? 'h6' : 'h4'"
+                    class=""
+                  >
                     <div class="nanum white--text">
-                      2명의 외국인 강사가 영어로만 하는 국제학교식 수업,
-                    </div>
-                    <div
-                      class="nanum white--text"
-                      :class="isMobile ? 'h6' : 'h4'"
-                    >
-                      블랙홀 영단어에서만 만날 수 있습니다.
+                      한국인 선생님의
+                      <span class="yellow--text">구문강의</span>와
+                      <br />
+                      외국인 선생님의
+                      <span class="yellow--text">실시간 영어</span>로 진행되는
+                      <br v-if="!isMobile" />
+                      <span class="amber--text">국제학교식수업!!</span> &nbsp;
+                      <span class="cyan--text font-weight-bold"
+                        >블랙홀 영단어</span
+                      >
+                      <br v-if="!isMobile" />
+                      에서만 만날 수 있습니다.
                     </div>
                   </v-col>
                 </v-row>
@@ -292,16 +302,51 @@
 
           <div class="mx-auto">
             <div class="mb-2 text-left h5 nanum mt-5">
-              <span class="font-weight-black">주 5회</span> 3개월과정(60회)
+              <span class="font-weight-black">주 5회</span> 3개월 과정(60회)
+              <br v-if="isMobile" />
               <span class="font-weight-black">462,000원</span> (154,000원/월)
             </div>
             <div class="mb-2 text-left h5 nanum">
-              <span class="font-weight-black">주 3회</span> 3개월과정(36회)
+              <span class="font-weight-black">주 3회</span> 3개월 과정(36회)
+              <br v-if="isMobile" />
               <span class="font-weight-black">294,000원</span> (98,000원/월)
             </div>
             <div class="mb-2 text-left h5 nanum">
-              <span class="font-weight-black">주 2회</span> 3개월과정(24회)
+              <span class="font-weight-black">주 2회</span> 3개월 과정(24회)
+              <br v-if="isMobile" />
               <span class="font-weight-black">207,000원</span> (69,000원/월)
+            </div>
+
+            <div class="mb-2 text-left h5 nanum mt-5">
+              <span class="font-weight-black">주 5회</span> 6개월 과정(120회)
+              <br v-if="isMobile" />
+              <span class="font-weight-black">924,000원</span> (154,000원/월)
+            </div>
+            <div class="mb-2 text-left h5 nanum">
+              <span class="font-weight-black">주 3회</span> 6개월 과정(72회)
+              <br v-if="isMobile" />
+              <span class="font-weight-black">588,000원</span> (98,000원/월)
+            </div>
+            <div class="mb-2 text-left h5 nanum">
+              <span class="font-weight-black">주 2회</span> 6개월 과정(48회)
+              <br v-if="isMobile" />
+              <span class="font-weight-black">414,000원</span> (69,000원/월)
+            </div>
+
+            <div class="mb-2 text-left h5 nanum mt-5">
+              <span class="font-weight-black">주 5회</span> 1년 과정(240회)
+              <br v-if="isMobile" />
+              <span class="font-weight-black">1,848,000원</span> (154,000원/월)
+            </div>
+            <div class="mb-2 text-left h5 nanum">
+              <span class="font-weight-black">주 3회</span> 1년 과정(144회)
+              <br v-if="isMobile" />
+              <span class="font-weight-black">1,176,000원</span> (98,000원/월)
+            </div>
+            <div class="mb-2 text-left h5 nanum">
+              <span class="font-weight-black">주 2회</span> 1년 과정(96회)
+              <br v-if="isMobile" />
+              <span class="font-weight-black">828,000원</span> (69,000원/월)
             </div>
             <div class="mt-10 text-left mb-10 mb-md-0">
               *1회 수업 : 회당 40분 이상 소요 <br v-if="isMobile" />
