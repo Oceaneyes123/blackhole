@@ -21,6 +21,7 @@
             class="white--text nav-link"
             :class="isMobile ? '' : 'h6'"
             @click="$router.push('/class')"
+            style="letter-spacing: 2px;"
           >
             수업안내
           </div>
@@ -30,6 +31,7 @@
             class="white--text nav-link"
             :class="isMobile ? '' : 'h6'"
             @click="$router.push('/free-class')"
+            style="letter-spacing: 2px;"
           >
             무료수업체험
           </div>
@@ -48,6 +50,7 @@
             class="white--text nav-link"
             :class="isMobile ? '' : 'h6'"
             @click="phoneDialog = true"
+            style="letter-spacing: 2px;"
           >
             마이페이지
           </div>
@@ -195,7 +198,7 @@ export default {
       phoneDialog: false,
       num: "",
       btnLoding: false,
-      numRules: [(v) => !!v || "번호를 입력하세요."],
+      numRules: [v => !!v || "번호를 입력하세요."]
     };
   },
 
@@ -223,10 +226,10 @@ export default {
           axios
             .get("//bhen.co.kr/api/get_is_mem.php", {
               params: {
-                num: this.num,
-              },
+                num: this.num
+              }
             })
-            .then((res) => {
+            .then(res => {
               if (res.data.result !== 0) {
                 this.$router.push("/mypage");
               } else {
@@ -234,7 +237,7 @@ export default {
                 alert("회원으로 등록되어있지 않습니다.");
               }
             })
-            .catch((err) => {
+            .catch(err => {
               this.btnLoding = false;
               alert("접속이 되지않습니다 고객센터에 문의하세요.");
               console.log(err);
@@ -246,10 +249,10 @@ export default {
           axios
             .get("//bhen.co.kr/api/get_is_mem.php", {
               params: {
-                num: this.num,
-              },
+                num: this.num
+              }
             })
-            .then((res) => {
+            .then(res => {
               if (res.data.result !== 0) {
                 this.$router.push("/mypage");
               } else {
@@ -257,14 +260,14 @@ export default {
                 alert("회원으로 등록되어있지 않습니다.");
               }
             })
-            .catch((err) => {
+            .catch(err => {
               this.btnLoding = false;
               alert("접속이 되지않습니다 고객센터에 문의하세요.");
               console.log(err);
             });
         }
       }
-    },
-  },
+    }
+  }
 };
 </script>
