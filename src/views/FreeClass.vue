@@ -495,12 +495,12 @@
               outlined
               round
               class="rounded-xl"
-              style="border: 2px solid #f2edfe;"
+              style="border: 2px solid #f2edfe"
               eager
             >
               <v-container fluid>
                 <v-row class="px-10 py-6">
-                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column ">
+                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
                     <v-img
                       src="@/assets/schedule_icon.png"
                       contain
@@ -511,7 +511,7 @@
                     </v-img>
 
                     <div class="pl-5">
-                      <p class="h4 mt-5 mb-0" style="color:#b0a0c9">01.</p>
+                      <p class="h4 mt-5 mb-0" style="color: #b0a0c9">01.</p>
                       <v-row dense>
                         <v-col cols="10">
                           <span class="mt-0 nanum grey--text body-1">
@@ -537,7 +537,7 @@
                     >
                     </v-img>
                     <div class="pl-5">
-                      <p class="h4 mt-5 mb-0" style="color:#b0a0c9">02.</p>
+                      <p class="h4 mt-5 mb-0" style="color: #b0a0c9">02.</p>
                       <v-row dense>
                         <v-col cols="10">
                           <span class="mt-0 nanum grey--text body-1">
@@ -565,7 +565,7 @@
                     >
                     </v-img>
                     <div class="pl-5">
-                      <p class="h4 mt-5 mb-0" style="color:#b0a0c9">03.</p>
+                      <p class="h4 mt-5 mb-0" style="color: #b0a0c9">03.</p>
                       <v-row dense>
                         <v-col cols="10">
                           <span class="mt-0 nanum grey--text body-1">
@@ -593,7 +593,7 @@
                     >
                     </v-img>
                     <div class="pl-5">
-                      <p class="h4 mt-5 mb-0 " style="color:#b0a0c9">04.</p>
+                      <p class="h4 mt-5 mb-0" style="color: #b0a0c9">04.</p>
                       <v-row dense>
                         <v-col cols="10">
                           <span class="mt-0 nanum grey--text body-1">
@@ -632,7 +632,7 @@
       multiLine
       v-model="snackbar"
     >
-      <span class="nanum font-weight-black "
+      <span class="nanum font-weight-black"
         >블랙홀 무료체험 신청이 완료되었습니다.</span
       >
       <template v-slot:action="{ attrs }">
@@ -700,10 +700,12 @@
 <script>
 import Header from "@/components/Header.vue";
 import ApplyFreeClassForm from "@/components/ApplyFreeClassForm";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
   components: {
     Header,
-    ApplyFreeClassForm
+    ApplyFreeClassForm,
   },
   data() {
     return {
@@ -716,14 +718,14 @@ export default {
           title: "영어발음에 큰 도움",
           body:
             "엄마의 권유로 하게 되어 처음에는 별로 열심히 하지 않았지만 영어단어를 게임을 하듯이 외우다 보니 쉽고 재밌어서 자꾸 하게 되었고 영어학원에서 공부할 때도 블랙홀에서 외운 단어들이 바로바로 생각나서 참 신기했다 그리고 원어민 선생님들이 발음도 매번 이야기 해 주셔서 많은 도움이 되었다.",
-          footer: "[중3] 다연학생"
+          footer: "[중3] 다연학생",
         },
         {
           title: "탁월한 복습량",
           body:
             "전시간에 배운 단어들을 복습하며 암기하다보니 내 단어 실력이 증가했음을 알 수 있었다. 또한 원어민 선생님과의 대화를 통해서 내가 모르는 단어가 있을 때 앞뒤 문맥에 맞추어 단어의 뜻을 추측하는 능력을 기를 수 있게 되었고, 전혀 감이 잡히지 않는 단어의 경우 선생님께 따로 여쭈워보면 내가 아는 쉬운 단어로 바꾸어 말씀해주시거나 그 단어의 뜻을 설명해주셔서 정말 많은 도움이 되었다.",
-          footer: "[고1] 다인학생"
-        }
+          footer: "[고1] 다인학생",
+        },
       ],
 
       review2: [
@@ -731,14 +733,14 @@ export default {
           title: "완벽한 단어암기",
           body:
             "당신은 블랙홀을 경험해 본 적이 있는가? 블랙홀 영어에서는 그날의 단어 미션을 완료하기 위하여2교시에 블랙홀 수업을 하게 된다 말 그대로 미션을 완료할 때까지 절대로 빠져 나올 수 없다. 나는 오늘도 어제수업을 빠진 결과 다른 아이들 보다 블랙홀에서 선생님과 단 둘이 30분을 더 체류 할 수 밖에 없었다.. ㅠㅠ단어를 외우지 않으면 수업이 끝나지 않는다...블랙홀 ㅠㅠ!!",
-          footer: "[중1]재민학생"
+          footer: "[중1]재민학생",
         },
         {
           title: "적극적인 수업참여",
           body:
             "처음엔 뭐 다 비슷비슷하겠지..했었는데 아이 눈높이에 맞춰 수업하시는 선생님의 질문에 아이가 적극적으로 대답하는 모습을 보였고, 단어 외우는 것도 퀴즈를 풀고 맞추는 기분이라며 내일은 더 잘 할거라고 얘기를 했습니다. 이젠 내일을, 블랙홀을 기대하게 되었습니다..  오늘.. 아이들은 선생님과의 시간을 먼저 체크하고 기다리네요. 블랙홀!! 아이들에게 내일은 더 잘할 수 있다는 자신감을 갖게 해줘서 정말정말 감사합니다!!",
-          footer: "[중1] 용인 정인이 부모님"
-        }
+          footer: "[중1] 용인 정인이 부모님",
+        },
       ],
 
       review3: [
@@ -746,15 +748,15 @@ export default {
           title: "국제학교식 수업",
           body:
             "처음엔 단어량이 적었는데 점차 양이 늘어가면서 단어 실력이 확실히 좋아진 것을 느낀다. 외국인강사와 함께100% 영어로만 소통하는 국제학교식 수업으로 단어를 계속 노출 시키면서 마지막엔 스펠링까지 쓰게 하게끔 하여 결국은 단어를 외우지 않으면 안 되게 끔  하는 시스템이 큰 장점이다. 단어 하나를 가지고도 쓰고 말하고 독해하며 외우게 하는 블랙홀 수업방식에 너무 만족해하며 수업하고 있다.",
-          footer: "[중2] 수원 주현 학부모님"
+          footer: "[중2] 수원 주현 학부모님",
         },
         {
           title: "영자신문 독해까지",
           body:
             "영자신문의 단어들을 3단계에 거쳐 외우게 하고 독해랑 테스트가 끝나면 2교시 블랙홀단계로 가는데 말그대로 테스트를 통과 못하면 블랙홀에서 통과할 때까지 못 빠져 나온다.쉽게 생각하던 울 아들.. 막상 수업에 들어가 한번 블랙홀을 경험하더니 다음 시간부터는 무지 진지해진다. 아무튼 영어학원 몇 년을 다녀도 안 잡히는 단어가 블랙홀에선 잡히고 있어 너무 흐믓하다. 정말 신기하다.",
-          footer: "[중3] 동탄 찬규 부모님"
-        }
-      ]
+          footer: "[중3] 동탄 찬규 부모님",
+        },
+      ],
     };
   },
 
@@ -768,6 +770,8 @@ export default {
   mounted() {
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
+    AOS.init();
+    AOS.refresh();
   },
 
   methods: {
@@ -777,8 +781,8 @@ export default {
     },
     setSnackbar(data) {
       this.snackbar = data;
-    }
+    },
   },
-  computed: {}
+  computed: {},
 };
 </script>

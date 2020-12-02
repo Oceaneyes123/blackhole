@@ -11,13 +11,15 @@
           <v-container
             class="d-flex flex-column"
             :class="isMobile ? 'px-0 py-0 ' : 'px-8'"
-            style="height: 100%;"
+            style="height: 100%"
           >
             <Header></Header>
 
             <div class="my-auto mx-auto text-center">
               <div class="white--text h3 gmarket">수업안내</div>
-              <div class="white--text mb-10 mb-md-0">HOME > 수업안내</div>
+              <div class="white--text mb-10 mb-md-0" @click="setStorage()">
+                HOME > 수업안내
+              </div>
             </div>
           </v-container>
 
@@ -72,7 +74,12 @@
         <v-container>
           <v-row justify="center">
             <v-col cols="12" md="4" lg="3">
-              <v-card flat class="d-flex flex-column align-center">
+              <v-card
+                flat
+                class="d-flex flex-column align-center"
+                data-aos="fade-right"
+                data-aos-anchor-placement="center-bottom"
+              >
                 <v-img
                   src="../assets/forum.png"
                   width="200"
@@ -92,7 +99,11 @@
               lg="3"
               class="d-flex flex-column align-center"
             >
-              <v-card flat>
+              <v-card
+                flat
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+              >
                 <v-img
                   src="../assets/classcard.png"
                   width="200"
@@ -112,7 +123,11 @@
               lg="3"
               class="d-flex flex-column align-center"
             >
-              <v-card flat>
+              <v-card
+                flat
+                data-aos="fade-left"
+                data-aos-anchor-placement="center-bottom"
+              >
                 <v-img
                   src="../assets/email.png"
                   width="200"
@@ -143,6 +158,9 @@
         class="pa-5 mt-10 mx-auto rounded-xl h6"
         max-width="700"
         style="border: 1px solid orange"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-duration="1500"
       >
         <div class="text-center grey--text korean-text">
           수업에 <span class="font-weight-bold">방해가 되는</span> 행동을 가급적
@@ -167,6 +185,8 @@
                 height="200"
                 width="200"
                 style="border: 10px solid #34163e"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
               >
                 <div class="text-center" :class="isMobile ? '' : 'h6'">
                   Zoom 수업 <br />
@@ -182,6 +202,8 @@
                 height="200"
                 width="200"
                 style="border: 10px solid #34163e"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
               >
                 <div
                   class="text-center font-weight-black"
@@ -200,6 +222,8 @@
                 height="200"
                 width="200"
                 style="border: 10px solid #34163e"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
               >
                 <div class="text-center" :class="isMobile ? '' : 'h6'">
                   출석 부를때 <br />
@@ -214,6 +238,8 @@
                 height="200"
                 width="200"
                 style="border: 10px solid #34163e"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
               >
                 <div class="text-center">
                   <span class="font-weight-black" :class="isMobile ? '' : 'h6'"
@@ -232,6 +258,8 @@
                 height="200"
                 width="200"
                 style="border: 10px solid #34163e"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
               >
                 <div
                   class="text-center font-weight-black"
@@ -257,6 +285,8 @@
                 height="200"
                 width="200"
                 style="border: 10px solid #34163e"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
               >
                 <div class="text-center">
                   <span class="font-weight-black" :class="isMobile ? '' : 'h6'"
@@ -284,7 +314,7 @@
       >
         <div
           class="d-flex flex-column justify-center align-self-center"
-          style="height:100%"
+          style="height: 100%"
         >
           <div class="text-center gmarket h3 white--text bordered-text">
             수강료
@@ -462,13 +492,15 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
   components: { Header },
   data() {
     return {
       rating: 4.8,
       screenWidth: "",
-      isMobile: false
+      isMobile: false,
     };
   },
 
@@ -482,13 +514,19 @@ export default {
   mounted() {
     this.screenWidth = screen.width;
     this.isMobile = this.screenWidth <= 960 ? true : false;
+    AOS.init();
+    AOS.refresh();
   },
 
   methods: {
     onWindowResize() {
       this.screenWidth = screen.width;
       this.isMobile = this.screenWidth <= 960 ? true : false;
-    }
-  }
+    },
+
+    setCookie() {
+      document.cookie = "status=true";
+    },
+  },
 };
 </script>
