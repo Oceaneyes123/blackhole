@@ -113,7 +113,10 @@
         국내최초! 쌍방향 온라인 화상강의
       </div>
 
-      <ApplyFreeClassForm @setSnackbar="setSnackbar"></ApplyFreeClassForm>
+      <ApplyFreeClassForm
+        @setSnackbar="setSnackbar"
+        data-aos="zoom-in"
+      ></ApplyFreeClassForm>
     </v-container>
     <v-container
       class="px-0 py-0"
@@ -341,7 +344,10 @@
         :class="isMobile ? 'px-2' : 'px-15'"
         style="background: linear-gradient(to bottom right, #edf1fb, #f7eff5)"
       >
-        <v-container>
+        <v-container
+          data-aos="fade-right"
+          data-aos-anchor-placement="center-bottom"
+        >
           <v-row class="py-15">
             <v-col
               cols="12"
@@ -389,7 +395,10 @@
         :class="isMobile ? 'px-2' : 'px-15'"
         style="background: linear-gradient(to bottom right, #e8f7f8, #f9f2f7)"
       >
-        <v-container>
+        <v-container
+          data-aos="fade-left"
+          data-aos-anchor-placement="center-bottom"
+        >
           <v-row class="py-15">
             <v-col cols="12" md="4" offset-md="2">
               <v-img
@@ -422,7 +431,10 @@
         :class="isMobile ? 'px-2' : 'px-15'"
         style="background: linear-gradient(to bottom right, #f2f0fc, #ecf3f9)"
       >
-        <v-container>
+        <v-container
+          data-aos="fade-right"
+          data-aos-anchor-placement="center-bottom"
+        >
           <v-row class="py-15">
             <v-col
               cols="12"
@@ -500,7 +512,15 @@
             >
               <v-container fluid>
                 <v-row class="px-10 py-6">
-                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                  <v-col
+                    cols="12"
+                    lg="3"
+                    md="6"
+                    class="d-flex flex-column"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="500"
+                  >
                     <v-img
                       src="@/assets/schedule_icon.png"
                       contain
@@ -527,7 +547,15 @@
                       </v-row>
                     </div>
                   </v-col>
-                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                  <v-col
+                    cols="12"
+                    lg="3"
+                    md="6"
+                    class="d-flex flex-column"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="1000"
+                  >
                     <v-img
                       src="@/assets/message_icon.png"
                       contain
@@ -555,7 +583,15 @@
                       </v-row>
                     </div>
                   </v-col>
-                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                  <v-col
+                    cols="12"
+                    lg="3"
+                    md="6"
+                    class="d-flex flex-column"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="1500"
+                  >
                     <v-img
                       src="@/assets/card_icon.png"
                       contain
@@ -583,7 +619,15 @@
                       </v-row>
                     </div>
                   </v-col>
-                  <v-col cols="12" lg="3" md="6" class="d-flex flex-column">
+                  <v-col
+                    cols="12"
+                    lg="3"
+                    md="6"
+                    class="d-flex flex-column"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="2000"
+                  >
                     <v-img
                       src="@/assets/uniform_icon.png"
                       contain
