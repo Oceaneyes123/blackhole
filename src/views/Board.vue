@@ -55,13 +55,16 @@ tbody tr:nth-of-type(odd) {
 
 <script>
 import Header from "@/components/Header.vue";
+import mobile from "../mixins/mobile";
+
 export default {
   components: { Header },
+
+  mixins: [mobile],
+
   data() {
     return {
       rating: 4.8,
-      screenWidth: "",
-      isMobile: false,
 
       items: ["최신순"],
 
@@ -119,17 +122,9 @@ export default {
     };
   },
 
-  created() {
-    window.addEventListener("resize", this.onWindowResize);
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.onWindowResize);
-  },
-
-  mounted() {
-    this.screenWidth = screen.width;
-    this.isMobile = this.screenWidth <= 960 ? true : false;
-  },
+  created() {},
+  destroyed() {},
+  mounted() {},
 
   methods: {
     onWindowResize() {

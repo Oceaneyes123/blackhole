@@ -539,39 +539,25 @@
 import Header from "@/components/Header.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import mobile from "../mixins/mobile";
+
 export default {
   components: { Header },
+  mixins: [mobile],
   data() {
     return {
       rating: 4.8,
-      screenWidth: "",
-      isMobile: false,
     };
   },
 
-  created() {
-    window.addEventListener("resize", this.onWindowResize);
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.onWindowResize);
-  },
+  created() {},
+  destroyed() {},
 
   mounted() {
-    this.screenWidth = screen.width;
-    this.isMobile = this.screenWidth <= 960 ? true : false;
     AOS.init();
     AOS.refresh();
   },
 
-  methods: {
-    onWindowResize() {
-      this.screenWidth = screen.width;
-      this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
-
-    setCookie() {
-      document.cookie = "status=true";
-    },
-  },
+  methods: {},
 };
 </script>

@@ -868,10 +868,12 @@
 import Header from "@/components/Header.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import mobile from "../mixins/mobile";
 export default {
   components: {
     Header,
   },
+  mixins: [mobile],
 
   data() {
     return {
@@ -928,31 +930,19 @@ export default {
     };
   },
 
-  created() {
-    window.addEventListener("resize", this.onWindowResize);
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.onWindowResize);
-  },
+  created() {},
+  destroyed() {},
 
   mounted() {
-    this.screenWidth = screen.width;
-    this.isMobile = this.screenWidth <= 960 ? true : false;
     AOS.init();
     AOS.refresh();
-
-    // document.getElementById("scroll").scrollIntoView();
   },
 
   methods: {
-    onScroll(e) {
-      this.offsetTop = e.target.scrollTop;
-      console.log(e.target.scrollTop);
-    },
-    onWindowResize() {
-      this.screenWidth = screen.width;
-      this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
+    // onScroll(e) {
+    //   this.offsetTop = e.target.scrollTop;
+    //   console.log(e.target.scrollTop);
+    // },
   },
 };
 </script>
