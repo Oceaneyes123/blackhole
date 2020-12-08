@@ -126,11 +126,6 @@ export default {
   destroyed() {},
   mounted() {},
 
-  methods: {
-    onWindowResize() {
-      this.screenWidth = screen.width;
-      this.isMobile = this.screenWidth <= 960 ? true : false;
-    },
-  },
+  methods: {},
 };
 </script>

@@ -744,8 +744,7 @@
 <script>
 import Header from "@/components/Header.vue";
 import ApplyFreeClassForm from "@/components/ApplyFreeClassForm";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import mobile from "../mixins/mobile";
 export default {
   components: {
@@ -810,8 +809,7 @@ export default {
   destroyed() {},
 
   mounted() {
-    AOS.init();
-    AOS.refresh();
+
   },
 
   methods: {

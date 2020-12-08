@@ -866,8 +866,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import mobile from "../mixins/mobile";
 export default {
   components: {
@@ -933,10 +932,7 @@ export default {
   created() {},
   destroyed() {},
 
-  mounted() {
-    AOS.init();
-    AOS.refresh();
-  },
+  mounted() {},
 
   methods: {
     // onScroll(e) {
