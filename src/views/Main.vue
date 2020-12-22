@@ -222,12 +222,7 @@
       </div>
     </v-container>
     <v-divider></v-divider>
-    <v-container
-      class="py-0 px-3 px-md-0"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-anchor-placement="center-bottom"
-    >
+    <v-container class="py-0 px-3 px-md-0">
       <div class="text-center">
         <div class="brb text-purple mt-10" :class="isMobile ? 'h4' : 'h2'">
           커리큘럼
