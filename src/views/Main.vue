@@ -243,8 +243,6 @@
       <div
         class="d-flex flex-column flex-md-row justify-center mt-10"
         data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="center-bottom"
       >
         <v-row
           justify="center"
@@ -256,6 +254,8 @@
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
             width="200"
             height="200"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="center-bottom"
           >
             <v-progress-circular
               :rotate="360"
@@ -273,6 +273,8 @@
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
             width="200"
             height="200"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="center-bottom"
           >
             <v-progress-circular
               :rotate="360"
@@ -290,6 +292,8 @@
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
             width="200"
             height="200"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="center-bottom"
           >
             <v-progress-circular
               :rotate="360"
@@ -307,6 +311,8 @@
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
             width="200"
             height="200"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="center-bottom"
           >
             <v-progress-circular
               :rotate="360"
@@ -324,6 +330,8 @@
             class="rounded-circle d-flex align-center justify-center text-center mx-auto mx-md-3 my-5 my-md-0 h6"
             width="200"
             height="200"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="center-bottom"
           >
             <v-progress-circular
               :rotate="360"
@@ -359,14 +367,13 @@
       class="d-flex flex-column"
       :class="isMobile ? 'px-0 py-0 ' : 'px-16'"
     >
-      <v-row
-        justify="space-around"
-        class="d-flex"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-anchor-placement="center-bottom"
-      >
-        <v-col cols="9" md="2">
+      <v-row justify="space-around" class="d-flex" data-aos="fade-up">
+        <v-col
+          cols="9"
+          md="2"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div>
             <div style="color: #7de314" class="font-weight-black">1 LEVEL</div>
             <div
@@ -385,7 +392,12 @@
             </div>
           </div>
         </v-col>
-        <v-col cols="9" md="2">
+        <v-col
+          cols="9"
+          md="2"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div style="color: #01cc9b" class="font-weight-black">2 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text korean-text"
@@ -400,7 +412,12 @@
             * 주요 기본단어 20개씩 암기 * 듣기. 말하기 수업
           </div>
         </v-col>
-        <v-col cols="9" md="2">
+        <v-col
+          cols="9"
+          md="2"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div style="color: #14a0c0" class="font-weight-black">3 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text korean-text"
@@ -417,7 +434,12 @@
             * 논리적인 사고를 유도하는 독해훈련
           </div>
         </v-col>
-        <v-col cols="9" md="2">
+        <v-col
+          cols="9"
+          md="2"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div style="color: #5059ab" class="font-weight-black">4 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text korean-text"
@@ -435,7 +457,12 @@
             * 문장구조 이해력 강화
           </div>
         </v-col>
-        <v-col cols="9" md="2">
+        <v-col
+          cols="9"
+          md="2"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div style="color: #9052a9" class="font-weight-black">5 LEVEL</div>
           <div
             class="mt-5 font-weight-black grey--text korean-text"
