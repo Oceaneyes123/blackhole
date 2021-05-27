@@ -38,8 +38,8 @@
                     :class="isMobile ? 'h6' : 'h4'"
                   >
                     <div
-                      style="color: #9b63d8"
-                      class="nanum text-right"
+                      style="color: #9b63d8; width: 100%"
+                      class="nanum text-right text-md-center"
                       :class="isMobile ? 'h6' : 'h4'"
                     >
                       쌍방향 온라인 수업
@@ -545,7 +545,7 @@ export default {
   mixins: [mobile],
   data() {
     return {
-      rating: 4.8,
+      rating: 4.8
     };
   },
 
@@ -554,6 +554,6 @@ export default {
 
   mounted() {},
 
-  methods: {},
+  methods: {}
 };
 </script>
